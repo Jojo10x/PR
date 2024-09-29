@@ -37,7 +37,7 @@ const Compare: React.FC = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get<Product[]>("/api/products");
+        const response = await axios.get<Product[]>(`${apiUrl}/api/products`);
         console.log(response.data);
         setProducts(response.data);
         setLoading(false);
@@ -51,6 +51,8 @@ const Compare: React.FC = () => {
     fetchProducts();
   }, []);
 
+  const apiUrl = "https://prserver.onrender.com";
+
   const handleSelect = (product: Product) => {
     setSelectedProducts((prev) => {
       if (prev.length === 2) return prev;
@@ -61,7 +63,7 @@ const Compare: React.FC = () => {
   const handleClearSelection = () => {
     setSelectedProducts([]);
   };
-  const imageBaseUrl = "http://localhost:5003";
+  const imageBaseUrl = apiUrl + "/";
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
