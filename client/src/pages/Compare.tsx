@@ -63,7 +63,7 @@ const Compare: React.FC = () => {
   const handleClearSelection = () => {
     setSelectedProducts([]);
   };
-  const imageBaseUrl = apiUrl + "/";
+  const imageBaseUrl = apiUrl;
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
