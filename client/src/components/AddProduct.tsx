@@ -32,9 +32,11 @@ const AddProduct: React.FC = () => {
     fetchProducts();
   }, []);
 
+  const apiUrl = "https://prserver.onrender.com";
+
   const fetchProducts = async () => {
     try {
-      const response = await axios.get<Product[]>("/api/products");
+      const response = await axios.get<Product[]>(`${apiUrl}/api/products`);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -73,12 +75,12 @@ const AddProduct: React.FC = () => {
     try {
       if (editingProductId) {
         await axios.put(
-          `http://localhost:5003/api/products/${editingProductId}`,
+          `${apiUrl}/api/products/${editingProductId}`,
           formData
         );
         setModalMessage("Product edited successfully!");
       } else {
-        await axios.post("http://localhost:5003/products", formData);
+        await axios.post(`${apiUrl}/products`, formData);
         setModalMessage("Product added successfully!");
       }
 
@@ -100,7 +102,7 @@ const AddProduct: React.FC = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`/api/products/${id}`);
+      await axios.delete(`${apiUrl}/api/products/${id}`);
       setModalMessage("Product deleted successfully!");
       setModalVisible(true);
       fetchProducts(); 
