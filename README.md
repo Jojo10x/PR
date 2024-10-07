@@ -51,3 +51,16 @@ login: admin
 password: admin
 
 ## Live site: https://pr-ryd0.onrender.com/
+
+## Home Page
+<img width="1352" alt="Screenshot 2024-10-07 at 11 37 35 PM" src="https://github.com/user-attachments/assets/ab53100b-bfc4-4c5c-a00c-0bb5b0a7020a">
+<img width="1352" alt="Screenshot 2024-10-07 at 11 38 05 PM" src="https://github.com/user-attachments/assets/59e26204-79ea-4bc2-8c85-cd1220545727">
+<img width="1352" alt="Screenshot 2024-10-07 at 11 38 13 PM" src="https://github.com/user-attachments/assets/166bafdc-dc8d-4a97-b9eb-16a051549b61">
+
+## Admin Page
+
+<img width="1352" alt="Screenshot 2024-10-07 at 11 37 08 PM" src="https://github.com/user-attachments/assets/6fe49d87-cb25-4971-80f6-3f943b70a047">
+
+
+
+
